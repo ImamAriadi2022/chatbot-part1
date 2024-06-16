@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Perpustakaan</title>
+    <link rel="stylesheet" href="/static/ai.css">
+</head>
+<body>
+    <h1>Selamat Datang di Chatbot Perpustakaan</h1>
+    <div id="chatbox">
+        <div id="chatlogs"></div>
+        <input type="text" id="user-input" placeholder="Tanyakan sesuatu tentang lokasi, jam buka, hari libur, peraturan, atau fasilitas...">
+        <button onclick="sendMessage()">Kirim</button>
+    </div>
+    <script>
+        async function sendMessage() {
+            const inputField = document.getElementById('user-input');
+            console.log(inputField);
+            const userInput = inputField.value;
+            inputField.value = '';
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userInput })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                const chatlogs = document.getElementById('chatlogs');
+                chatlogs.innerHTML += `<p><strong>Anda:</strong> ${userInput}</p>`;
+                chatlogs.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+                chatlogs.scrollTop = chatlogs.scrollHeight;  // Scroll ke bawah log chat
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan, coba lagi nanti.');
+            }
+        }
+    </script>
+</body>
+</html>

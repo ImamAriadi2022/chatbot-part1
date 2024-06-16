@@ -1,0 +1,12 @@
+key,synonyms
+lokasi,lokasi,tempat,dimana,alamat,posisi,letak,kedudukan,titik
+jam_buka,jam buka,waktu buka,buka,jam operasional,jam kerja,jam layanan,waktu operasional,waktu kerja
+hari_libur,hari libur,libur,tutup,hari tutup,tidak buka,cuti,hari rehat,hari istirahat
+peraturan,peraturan,aturan,rules,kebijakan,regulasi,ketentuan,prosedur,tata tertib,kaidah
+keanggotaan,keanggotaan,member,anggota,registrasi,pendaftaran,subskripsi,keahlian,keikutsertaan,partisipasi
+pinjam_buku,pinjam buku,peminjaman,meminjam,pinjam,buku pinjaman,meminjam buku,sewa buku,ambil buku,gunakan buku
+keterlambatan,keterlambatan,denda,terlambat,denda keterlambatan,keterlambatan buku,penundaan,terlambat kembali,biaya keterlambatan,penalty
+layanan_online,layanan online,peminjaman online,website,online,internet,platform online,layanan digital,portal,web
+kontak,kontak,hubungi,nomor telepon,email,nomor kontak,informasi kontak,alamat email,telepon,komunikasi
+fasilitas,fasilitas,wi-fi,wifi,ruang baca,komputer,internet gratis,layanan,prasarana,sarana,akses internet,perlengkapan
+sapaan,sapaan,halo,hi,selamat datang,selamat pagi,selamat siang,selamat sore,selamat malam,apa kabar,hai
